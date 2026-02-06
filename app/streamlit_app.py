@@ -1,3 +1,28 @@
+import subprocess
+import sys
+import os
+from pathlib import Path
+
+# Ensure spaCy model is available
+def setup_spacy_model():
+    """Download spaCy model if not available"""
+    try:
+        import spacy
+        try:
+            spacy.load("en_core_web_sm")
+            print("✓ spaCy model already available")
+        except OSError:
+            print("📥 Downloading spaCy model (first run, may take a moment)...")
+            subprocess.check_call(
+                [sys.executable, "-m", "spacy", "download", "en_core_web_sm"]
+            )
+            print("✓ spaCy model downloaded successfully")
+    except Exception as e:
+        print(f"⚠️ Error with spaCy setup: {e}")
+        raise
+
+
+setup_spacy_model()
 import streamlit as st
 from pathlib import Path
 from dotenv import load_dotenv
