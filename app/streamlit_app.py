@@ -2,7 +2,7 @@ import streamlit as st
 from pathlib import Path
 from dotenv import load_dotenv
 import sys
-from app.utils.pdf_exporter import export_pdf
+from utils.pdf_exporter import export_pdf
 
 
 # Load environment variables FIRST
@@ -12,10 +12,10 @@ load_dotenv(dotenv_path=env_path)
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from app.services.contract_analyzer import ContractAnalyzer
-from app.services.risk_scorer import RiskScorer
-from app.services.compliance_checker import ComplianceChecker
-from app.utils.file_handler import FileHandler
+from services.contract_analyzer import ContractAnalyzer
+from services.risk_scorer import RiskScorer
+from services.compliance_checker import ComplianceChecker
+from utils.file_handler import FileHandler
 
 # ============================================
 # PAGE CONFIG
