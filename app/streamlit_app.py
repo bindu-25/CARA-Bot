@@ -9,8 +9,6 @@ from utils.pdf_exporter import export_pdf
 env_path = Path(__file__).parent.parent / '.env'
 load_dotenv(dotenv_path=env_path)
 
-# Add parent directory to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from services.contract_analyzer import ContractAnalyzer
 from services.risk_scorer import RiskScorer
