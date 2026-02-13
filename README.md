@@ -254,12 +254,4 @@ CARA Bot is an **assistive legal analysis tool** and does not replace profession
 
 ---
 
-If you want, I can also provide:
 
-* 📄 **Academic-style README**
-* 🧪 **Testing & evaluation section**
-* 🧠 **Architecture diagram explanation**
-* 🎓 **Resume / project description version**
-
-Just tell me.
->>>>>>> 5762e7a016b6d0fa1b00fd831715a966cbb4e6a5
